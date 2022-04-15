@@ -1,0 +1,46 @@
+.wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 0;
+    transition: 0.2s;
+    background-color: $light-blue;
+}
+
+.wrapper[data-scroll="true"] {
+    background-color: rgba($color: $light-blue, $alpha: 0.8);
+}
+
+.content {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.2s;
+    border: none;
+}
+
+.backdrop[data-open="false"] {
+    z-index: -1;
+    background: none;
+    transition: 0.2s;
+}
+
+.backdrop[data-open="true"] {
+    background-color: rgba($color: $black, $alpha: 0.7);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    transition: 0.2s ease-in-out;
+}

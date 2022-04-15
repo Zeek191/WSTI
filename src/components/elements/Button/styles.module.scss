@@ -1,0 +1,38 @@
+.button {
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 20px;
+    width: 100%;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.button[data-primary="true"] {
+    background: $light-blue;
+    border: 2px solid $white;
+    color: $white;
+}
+
+.button[data-primary="true"]:hover {
+    background: $white;
+    border: 2px solid $white;
+    color: $light-blue;
+    transition: 0.2s;
+}
+
+.button[data-secondary="true"] {
+    background: $white;
+    border: 2px solid $light-blue;
+    color: $light-blue;
+}
+
+
+.button[data-secondary="true"]:hover {
+    background: $light-blue;
+    border: 2px solid $white;
+    color: $white;
+}

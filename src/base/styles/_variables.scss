@@ -1,10 +1,16 @@
 $black: #0a1128;
 $dark-blue: #001f54;
-$mid-blue: #034078;
+$blue: #034078;
 $light-blue: #1282a2;
 $white: #fefcfb;
 
-$main-font-family: "montserrat", sans-serif;
+$max-width: 1270px;
+$main-font-family: "montserrat",
+sans-serif;
+
+$small-and-up: "screen and (min-width : 576px)";
+$tablet-and-up: "screen and (min-width: 768px)";
+$large-and-up: "screen and (min-width : 992px)";
 
 $size-paragraph: 12px;
 $size-small: 14px;

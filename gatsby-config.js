@@ -8,7 +8,10 @@ module.exports = {
   plugins: [
     {
       resolve: "gatsby-plugin-root-import",
-      options: { "@": path.join(__dirname, "src").replace(/\\/g, "/") },
+      options: {
+        "@": path.join(__dirname, "src").replace(/\\/g, "/"),
+        "~": path.join(__dirname, "public").replace(/\\/g, "/"),
+      },
     },
     "gatsby-plugin-svgr",
     {

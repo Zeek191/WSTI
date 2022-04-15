@@ -1,0 +1,134 @@
+@keyframes fadeFromUp {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.wrapper {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    @media #{$tablet-and-up} {
+        flex-direction: row;
+    }
+}
+
+.imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    margin-top: 60px;
+
+    @media #{$tablet-and-up} {
+        margin-top: 0px;
+        width: 33%;
+    }
+}
+
+.imageWrapper img {
+    padding: 40px;
+    max-width: 300px;
+}
+
+.contentWrapper {
+    background-color: $light-blue;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+
+    @media #{$tablet-and-up} {
+        width: 67%;
+        padding: 100px;
+    }
+
+}
+
+.contentWrapper>* {
+    margin-bottom: 15px;
+}
+
+.title {
+    font-size: 52px;
+}
+
+.price {
+    font-size: 40px;
+}
+
+.buttonWrapper {
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 400px;
+}
+
+.svgWrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $light-blue;
+    font-size: 16px;
+    text-decoration: none;
+    animation-name: fadeFromUp;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.svgWrapper p {
+    margin-left: 10px;
+}
+
+.cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    animation-name: fadeFromUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateY(-100px);
+    z-index: 15;
+}
+
+.backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.2s;
+    border: none;
+}
+
+.backdrop[data-open="false"] {
+    z-index: -1;
+    background: none;
+    transition: 0.2s;
+}
+
+.backdrop[data-open="true"] {
+    background-color: rgba($color: $black, $alpha: 0.7);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    transition: 0.2s ease-in-out;
+}

@@ -1,0 +1,17 @@
+.content {
+    display: flex;
+    flex-direction: column;
+
+    @media #{$tablet-and-up} {
+        flex-direction: row;
+    }
+}
+
+.filtersWrapper {
+    position: sticky;
+    top: 100px;
+}
+
+.categoryWrapper {
+    margin-top: 30px;
+}

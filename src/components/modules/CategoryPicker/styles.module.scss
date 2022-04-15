@@ -1,0 +1,28 @@
+.list {
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.listItem {
+    margin-bottom: 10px;
+}
+
+.label {
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.input[type="checkbox"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    margin-right: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.input[type="checkbox"]:checked {
+    background-color: $light-blue;
+    transition: 0.2s;
+}
