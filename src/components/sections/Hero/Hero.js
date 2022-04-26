@@ -11,7 +11,8 @@ export default function Hero({ title, description, cta_label, cta_link }) {
           <h1 className={styles.heading}>{title}</h1>
           <p className={styles.paragraph}>{description}</p>
           <div className={styles.link}>
-            <Button link external url={cta_link} mode="primary">
+            {console.log(cta_link)}
+            <Button link external url={"#section_products"} mode="primary">
               {cta_label}
             </Button>
           </div>

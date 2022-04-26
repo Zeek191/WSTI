@@ -55,7 +55,7 @@ export default function Products({ category_label }) {
 
   if (!categories || !products) return null
   return (
-    <div className="container" id="#section_products">
+    <div className="container" id="section_products">
       <div className="row">
         <div className={styles.content}>
           <div className={`col-md-3`}>

@@ -16,11 +16,6 @@ export default function Product({ pageContext }) {
     return setCartVisibility(!isCartVisible)
   }
 
-  useEffect(() => {
-    console.log("done")
-    console.log(state)
-  }, [state.cart])
-
   return (
     <>
       <div className={styles.wrapper}>
